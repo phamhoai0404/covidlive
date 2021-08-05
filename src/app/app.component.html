@@ -1,0 +1,45 @@
+
+<h1 align = "center">Danh sách Covid Việt Nam</h1>
+<table id = "customers" style="border-collapse: collapse">
+    <tr>
+        <th>Ngày</th>
+        <th>Số người mắc</th>
+        <th>Số người tử vong</th>
+    </tr>
+    <tr align="center">
+        <td *ngIf="dataLast1 !=null">
+            {{ dataLast2.Date |date: 'dd/MM/yyyy'}} <br>
+            {{ dataLast1.Date |date: 'dd/MM/yyyy'}}
+        </td>
+        <td> {{ numberActive |  number: "0.0"}}</td>
+        <td> {{ numberDeath |  number: "0.0"}}</td>
+    </tr>
+</table>
+
+<h1>Trong ngày {{dataLast1.Date | date: 'dd/MM/yyyy'}}</h1>
+<ul  class="to">
+    <li>Active:            {{dataLast1.Active |  number: "0.0"}} , </li>
+    <li>Confirmed:             {{dataLast1.Confirmed |  number: "0.0"}} , </li>
+    <li>Date:             {{dataLast1.Date |  date: 'dd/MM/yyyy'}}  , </li>
+    <li>Deaths:             {{dataLast1.Deaths |  number: "0.0"}} , </li>
+    <li>Lat:             {{dataLast1.Lat}} , </li>
+    <li>Lon:             {{dataLast1.Lon}} , </li>
+    <li>Province:             {{dataLast1.Province}} , </li>
+    <li>Recovered:             {{dataLast1.Recovered}} , </li>
+</ul>
+<br>
+<br>
+
+<h1>Trong ngày {{dataLast2.Date | date: 'dd/MM/yyyy'}}</h1>
+<ul  class="to">
+    <li>Active:            {{dataLast2.Active |  number: "0.0"}} , </li>
+    <li>Confirmed:             {{dataLast2.Confirmed |  number: "0.0"}} , </li>
+    <li>Date:             {{dataLast2.Date |  date: 'dd/MM/yyyy'}}  , </li>
+    <li>Deaths:             {{dataLast2.Deaths |  number: "0.0"}} , </li>
+    <li>Lat:             {{dataLast2.Lat}} , </li>
+    <li>Lon:             {{dataLast2.Lon}} , </li>
+    <li>Province:             {{dataLast2.Province}} , </li>
+    <li>Recovered:             {{dataLast2.Recovered}} , </li>
+</ul>
+<br>
+<br>
